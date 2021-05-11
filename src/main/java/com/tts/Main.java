@@ -7,6 +7,7 @@ import com.tts.AddressBook;
 
 public class Main extends Entry {
     public static int entryInput;
+    public static int searchInput;
 
 
     public static void main(String[] args) {
@@ -52,19 +53,39 @@ public class Main extends Entry {
 //                newAddy.delete(deleteNumber - 1);
 
 
-
 // 3 Search option
             } else if (entryInput == 3) {
                 System.out.println("***Searching***");
-//                System.out.println("Please choose how you'd like to search the database: 3\n" +
-//                        "1) First Name\n" +
-//                        "2) Last Name\n" +
-//                        "3) Phone Number\n" +
-//                        "4) Email Adress\n ");
-                System.out.println("Enter email: \n");
-                String search = sc.next();
-                System.out.println("Search Results: ");
-                newAddy.look(search);
+                System.out.println("Please choose how you'd like to search the database: 3\n" +
+                        "1) First Name\n" +
+                        "2) Last Name\n" +
+                        "3) Phone Number\n" +
+                        "4) Email Adress\n ");
+                searchInput = sc.nextInt();
+
+                if (searchInput == 1) {
+                    System.out.println("Enter first name: \n");
+                    String search = sc.next();
+                    System.out.println("Search Results: ");
+                    newAddy.firstName(search);
+                } else if (searchInput == 2) {
+                    System.out.println("Enter last name: \n");
+                    String search = sc.next();
+                    System.out.println("Search Results: ");
+                    newAddy.lastName(search);
+                } else if (searchInput == 3) {
+                    System.out.println("Enter phone number: \n");
+                    String search = sc.next();
+                    System.out.println("Search Results: ");
+                    newAddy.phoneNumber(search);
+                } else if (searchInput == 4) {
+                    System.out.println("Enter email: \n");
+                    String search = sc.next();
+                    System.out.println("Search Results: ");
+                    newAddy.look(search);
+                } else if (searchInput > 5 | searchInput < 1) {
+                    System.out.println("***Invalid response, please try again.***");
+                }
 
 
 // 4 Print option

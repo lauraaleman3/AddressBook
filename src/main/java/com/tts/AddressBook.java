@@ -22,13 +22,29 @@ public class AddressBook {
         listOfEntries.removeIf(e->e.getEmail().equals(email));
 
     }
-//
 
+    // To search for first name
+    public void firstName(String fName) {
 
+        this.listOfEntries.stream().filter(e->e.getfName().equals(fName)).forEach(System.out::println);
+    }
+    // To search for last name
+    public void lastName(String lName) {
+
+        this.listOfEntries.stream().filter(e->e.getlName().equals(lName)).forEach(System.out::println);
+    }
+    // To search for phone number
+    public void phoneNumber(String phoneNum) {
+
+        this.listOfEntries.stream().filter(e->e.getPhoneNum().equals(phoneNum)).forEach(System.out::println);
+    }
+
+// To search for email
     public void look(String email) {
         //List.get(int index) returns the object at the given index
         this.listOfEntries.stream().filter(e->e.getEmail().equals(email)).forEach(System.out::println);
     }
+
 
     public Entry[] viewAll() {
         //create a new array with the size of our list
