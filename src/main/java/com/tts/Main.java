@@ -42,15 +42,8 @@ public class Main extends Entry {
 // 2 Delete option
             } else if (entryInput == 2) {
                 System.out.println("Please enter the email you'd like to remove.");
-
                 String input = sc.next();
-//                System.out.println("Deleting the following entry:\n" + (newAddy.get(input)));
                 newAddy.delete(input);
-
-
-//                int deleteNumber = sc.nextInt();
-//                System.out.println("Deleted the following entry:\n" +(newAddy.get(deleteNumber - 1)));
-//                newAddy.delete(deleteNumber - 1);
 
 
 // 3 Search option

@@ -52,11 +52,9 @@ public class Entry {
 
     @Override
     public String toString() {
-        return "Entry{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                '}';
+        return  "First Name= " + fName + '\n' +
+                "Last Name= " + lName + '\n' +
+                "Email Address= " + email + '\n' +
+                "Phone Number= " + phoneNum + '\n' ;
     }
 }
